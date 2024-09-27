@@ -48,7 +48,7 @@ body {
   background-color: gray;
   border-radius: 20px;
   text-align: center;
-  padding: 20px;
+  padding: 50px;
 }
 
 .footer-basic .copyright {
@@ -128,4 +128,14 @@ body {
   .button-59 {
     min-width: 170px;
   }
+}
+
+.copyright {
+  position: fixed;
+  width: 50%;
+  bottom: 10px;
+  padding-left: 10px;
+  right: 138px;
+  font-weight: bold;
+  color: white;
 }
