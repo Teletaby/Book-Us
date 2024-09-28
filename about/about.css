@@ -3,7 +3,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(../resources/back.jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  min-height:500px;
 }
 
 /* Navigation bar */
@@ -124,7 +124,11 @@ body {
 
   #coverImage {
     width: 150px;
-    left: 18%;
+    left: 24%;
+  }
+  .copyright{
+    text-align: center;
+    left: 20%;
   }
 }
 

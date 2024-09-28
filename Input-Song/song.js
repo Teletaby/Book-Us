@@ -3,7 +3,7 @@ const songdownload = async (download) => {
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '50b5f3b226msh0966c3a7bd972cap10e911jsn3c815d7d3627', // Use your actual API key
+            'x-rapidapi-key': '50b5f3b226msh0966c3a7bd972cap10e911jsn3c815d7d3627',
             'x-rapidapi-host': 'spotify-downloader9.p.rapidapi.com'
         }
     };
@@ -17,9 +17,8 @@ const songdownload = async (download) => {
 
         // Validate that the song data is in the expected format
         if (songData && songData.artist && songData.title && songData.album && songData.downloadLink) {
-            // Construct URL with song data as parameters
             const redirectUrl = `../about/about.html?cover=${encodeURIComponent(songData.cover)}&artist=${encodeURIComponent(songData.artist)}&title=${encodeURIComponent(songData.title)}&album=${encodeURIComponent(songData.album)}&link=${encodeURIComponent(songData.downloadLink)}`;
-            window.location.href = redirectUrl; // Redirect to about.html with parameters
+            window.location.href = redirectUrl;
         } else {
             console.log('Unexpected response format:', result);
             alert("Invalid song data received.");
@@ -42,13 +41,12 @@ document.getElementById('enterbtn').addEventListener("click", async (e) => {
     document.getElementById('loading-text').style.display = 'block';
 
     // Get song ID from input field
-    const songId = document.getElementById('songIdInput').value.trim(); // Trim to avoid unnecessary spaces
+    const songId = document.getElementById('songIdInput').value.trim();
 
     if (songId) {
-        await songdownload(songId); // Call the download function
+        await songdownload(songId);
     } else {
         alert("INVALID SONG ID");
-        // Hide loader if the song ID is invalid
         document.getElementById('loader').style.display = 'none';
         document.getElementById('loading-text').style.display = 'none';
     }

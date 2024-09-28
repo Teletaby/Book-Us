@@ -42,7 +42,7 @@ body {
   }
   /*join*/
   .book {
-    position: fixed; /* or 'absolute' if desired */
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -111,11 +111,20 @@ body {
 }
 /*bottom*/
 #info {
-    position: fixed;
-    width: 50%;
-    bottom: 10px;
-    padding-left: 10px;
-    right: 190px;
-    font-weight: bold;
-    color: white;
+  position: absolute;
+  width: 50%;
+  bottom: -10px;
+  left: 50%; 
+  transform: translateX(-50%); /* Center on small screens */
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #info {
+    left: 350px;
+    transform: none;
+    text-align: center;
+  }
 }

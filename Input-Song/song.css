@@ -39,6 +39,9 @@ body {
     font-size: 17px;
     font-weight: bold;
   }
+  #downloadTitle{
+    position: relative;
+  }
   .title {
     text-align: center;
     color: white;
@@ -50,13 +53,14 @@ body {
   }
 
 .info {
-  position: fixed;
-  top: 50%;
+  position: relative;
+  top: 85px;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: gray;
   border-radius: 20px;
   padding: 30px;
+  width: 25%;
 }
 
 
@@ -83,11 +87,11 @@ body {
 .loader {
   width: 50px;
   height: 50px;
-  border: 5px solid #f3f3f3; /* Light grey */
-  border-top: 5px solid #3498db; /* Blue */
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  display: none; /* Hide loader by default */
+  display: none;
 }
 
 @keyframes spin {
@@ -103,7 +107,7 @@ body {
 
 #loading-text {
   margin-top: 10px;
-  display: none; /* Hide text by default */
+  display: none;
 }
 
 button {
@@ -118,4 +122,16 @@ button {
   right: 138px;
   font-weight: bold;
   color: white;
+}
+
+/*different*/
+@media (max-width: 768px) {
+  .info {
+    width: 85%;
+    padding: 15px;
+  }
+}
+.copyright{
+  text-align: center;
+  left: 20%;
 }
