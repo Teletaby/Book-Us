@@ -2,10 +2,11 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-image: url(../resources/back.jpg);
-  background-size: 999px;
-  background-repeat:cover;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
+/* Navigation bar */
 .topnav {
   overflow: hidden;
   background-color: #333;
@@ -40,47 +41,94 @@ body {
   font-weight: bold;
 }
 
-.details {
-  position: fixed;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: gray;
-  border-radius: 20px;
+/* Footer copyright */
+.footer-basic .copyright {
+  margin-top: 15px;
   text-align: center;
-  padding: 50px;
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 0;
 }
 
-.footer-basic .copyright {
-  margin-top:15px;
-  text-align:center;
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:0;
-}
-#coverImage{
+#coverImage {
   position: relative;
-  top: 50%;
-  left: 38%;
-  transform: translate(-50%, -50%);
+  left: 25%;
+  transform: translateX(-50%);
   width: 150px;
   height: 150px;
-  top: 70px;
   border-radius: 20px;
+}
+
+#titleInfo {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  width: 600px;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  border-radius: 10px;
+}
+
+.details {
+  position: relative;
+  margin: 20px auto;
+  background-color: gray;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  width: 25%;
+  box-sizing: border-box;
 }
 
 .details .label {
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
-}
-.infoTitle {
-  text-align: center;
-  color: white;
-  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 8px;
 }
 
-/*button*/
+/*mobile devices*/
+@media (max-width: 480px) {
+  #titleInfo {
+    width: 95%; 
+  }
+  
+  .details {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .details .label {
+    font-size: 14px;
+  }
+
+  #coverImage {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    width: 85%;
+    padding: 15px;
+  }
+  
+  .details .label {
+    font-size: 16px;
+  }
+
+  #coverImage {
+    width: 150px;
+    left: 18%;
+  }
+}
+
+/*Button*/
 .button-59 {
   align-items: center;
   background-color: #fff;
@@ -90,7 +138,7 @@ body {
   cursor: pointer;
   display: inline-flex;
   fill: #000;
-  font-family: Inter,sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
   font-weight: 600;
   height: 48px;
@@ -133,7 +181,7 @@ body {
 .copyright {
   position: fixed;
   width: 50%;
-  bottom: 10px;
+  bottom: -10px;
   padding-left: 10px;
   right: 138px;
   font-weight: bold;

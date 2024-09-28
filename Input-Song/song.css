@@ -113,7 +113,7 @@ button {
 .copyright {
   position: fixed;
   width: 50%;
-  bottom: 10px;
+  bottom: -10px;
   padding-left: 10px;
   right: 138px;
   font-weight: bold;
